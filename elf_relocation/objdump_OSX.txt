@@ -1,0 +1,16 @@
+
+obj1.o:	file format Mach-O 64-bit x86-64
+
+Disassembly of section __TEXT,__text:
+__start:
+       0:	55 	pushq	%rbp
+       1:	48 89 e5 	movq	%rsp, %rbp
+       4:	48 83 ec 10 	subq	$16, %rsp
+       8:	b0 00 	movb	$0, %al
+       a:	e8 00 00 00 00 	callq	0 <__start+0xF>
+       f:	8b 4d fc 	movl	-4(%rbp), %ecx
+      12:	89 45 f8 	movl	%eax, -8(%rbp)
+      15:	89 c8 	movl	%ecx, %eax
+      17:	48 83 c4 10 	addq	$16, %rsp
+      1b:	5d 	popq	%rbp
+      1c:	c3 	retq
