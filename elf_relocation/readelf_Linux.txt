@@ -1,8 +1,15 @@
+readelf -r obj1.o:
 
 Relocation section '.rela.text' at offset 0x520 contains 1 entries:
   Offset          Info           Type           Sym. Value    Sym. Name + Addend
 00000000000a  000900000002 R_X86_64_PC32     0000000000000000 foo - 4
 
 Relocation section '.rela.eh_frame' at offset 0x538 contains 1 entries:
+  Offset          Info           Type           Sym. Value    Sym. Name + Addend
+000000000020  000200000002 R_X86_64_PC32     0000000000000000 .text + 0
+
+readelf -r obj2.o
+
+Relocation section '.rela.eh_frame' at offset 0x4b8 contains 1 entries:
   Offset          Info           Type           Sym. Value    Sym. Name + Addend
 000000000020  000200000002 R_X86_64_PC32     0000000000000000 .text + 0

@@ -7,3 +7,9 @@
 2. Dump generated assembly code:
 
 `objdump -d obj1.o`
+
+3. Compile obj2 and then link both file
+
+`gcc -nostdlib obj2.c -c -o obj2.o`
+
+`gcc -nostdlib obj1.o obj2.o -o relocation`
