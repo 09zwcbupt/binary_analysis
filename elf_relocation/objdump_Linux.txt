@@ -8,7 +8,8 @@ Disassembly of section .text:
    0:	55                   	push   %rbp
    1:	48 89 e5             	mov    %rsp,%rbp
    4:	b8 00 00 00 00       	mov    $0x0,%eax
-   9:	e8 00 00 00 00       	callq  e <_start+0xe>
+   9:	e8 00 00 00 00       	callq  e <_start+0xe>   <= relocation entry
+                                                           R_X86_64_PC32; S + A - P
    e:	5d                   	pop    %rbp
    f:	c3                   	retq   
 
@@ -23,3 +24,23 @@ Disassembly of section .text:
    4:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
    9:	5d                   	pop    %rbp
    a:	c3                   	retq   
+
+relocation:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000400144 <_start>:
+  400144:	55                   	push   %rbp
+  400145:	48 89 e5             	mov    %rsp,%rbp
+  400148:	b8 00 00 00 00       	mov    $0x0,%eax
+  40014d:	e8 02 00 00 00       	callq  400154 <foo>
+  400152:	5d                   	pop    %rbp
+  400153:	c3                   	retq   
+
+0000000000400154 <foo>:
+  400154:	55                   	push   %rbp
+  400155:	48 89 e5             	mov    %rsp,%rbp
+  400158:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+  40015d:	5d                   	pop    %rbp
+  40015e:	c3                   	retq   
