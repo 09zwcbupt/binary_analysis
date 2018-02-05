@@ -34,7 +34,8 @@ Disassembly of section .text:
   400144:	55                   	push   %rbp
   400145:	48 89 e5             	mov    %rsp,%rbp
   400148:	b8 00 00 00 00       	mov    $0x0,%eax
-  40014d:	e8 02 00 00 00       	callq  400154 <foo> <= S(0x400154) + A(-4, from readelf dump) - P(40014e) = 2
+  40014d:	e8 02 00 00 00       	callq  400154 <foo> <= S(0x400154) + A(-4, from readelf dump) - P(40014e) = 2. When calling,
+                                                           0x400154 = 0x40014d + 2(offset in instruction) + 5(len of instruction)
   400152:	5d                   	pop    %rbp
   400153:	c3                   	retq   
 
