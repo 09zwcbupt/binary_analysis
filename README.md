@@ -13,3 +13,9 @@
 `gcc -nostdlib obj2.c -c -o obj2.o`
 
 `gcc -nostdlib obj1.o obj2.o -o relocation`
+
+## ptrace
+1. compile tracer.c and tracer_test.c:
+`gcc tracer.c -o tracer`
+`gcc tracer_test.c -o test`
+`./tracer test main`
