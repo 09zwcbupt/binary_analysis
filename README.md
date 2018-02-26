@@ -22,3 +22,11 @@ gcc tracer.c -o tracer
 gcc tracer_test.c -o test
 ./tracer test main
 ```
+
+2. compile tracer2.c
+
+```
+gcc tracer.c -o tracer2
+./test&
+./tracer2 -p `pidof ./test` -f test
+```
