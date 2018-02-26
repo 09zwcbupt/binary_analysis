@@ -16,6 +16,9 @@
 
 ## ptrace
 1. compile tracer.c and tracer_test.c:
-`gcc tracer.c -o tracer`
-`gcc tracer_test.c -o test`
-`./tracer test main`
+
+```
+gcc tracer.c -o tracer
+gcc tracer_test.c -o test
+./tracer test main
+```
